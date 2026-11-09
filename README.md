@@ -1,4 +1,4 @@
-# Projeto-Cross-Validation
+# Projeto de Credit Score - Naive Bayes
 
 
 
