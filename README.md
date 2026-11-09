@@ -307,6 +307,7 @@ Portanto, os resultados perfeitos precisam ser reavaliados antes de serem utiliz
 Implicação para o negócio: a proposta do projeto é utilizar modelos preditivos para apoiar a avaliação de risco de crédito, contribuindo para decisões mais fundamentadas sobre empréstimos e financiamentos.
 
 # Projeto de Credit Score - Árvore de Decisão
+<img width="1408" height="768" alt="Gemini_Generated_Image_49jt2m49jt2m49jt" src="https://github.com/user-attachments/assets/f2237133-55a6-4aca-8a6d-4051f1727935" />
 
 ## 📌 Sobre o Projeto
 
