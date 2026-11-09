@@ -2,20 +2,207 @@
 
 ## 📌 Sobre o Projeto
 
+Desenvolvimento de um processo de preparação e análise exploratória de dados de clientes para um projeto de classificação de Credit Score.
+
+O trabalho envolve o tratamento de dados faltantes, transformação de variáveis, análise estatística, identificação de possíveis outliers, investigação de correlações, análise do perfil dos clientes e balanceamento das classes.
+
+A etapa prepara a base de dados para o desenvolvimento de modelos de Machine Learning capazes de classificar o perfil de crédito dos clientes.
+
 ## 🎯 Objetivo
+
+Preparar e transformar uma base de dados bancária para possibilitar a construção de modelos preditivos de Credit Score.
+
+*O projeto busca:*
+- Melhorar a qualidade e consistência dos dados.
+- Identificar padrões e relações entre características dos clientes e seus scores de crédito.
+- Tratar variáveis numéricas e categóricas.
+- Investigar correlações entre as variáveis.
+- Balancear as classes da variável-alvo.
+- Separar os dados em conjuntos de treinamento e teste.
 
 ## 💻 Problema de Negócio / Pergunta de Pesquisa
 
+É possível identificar padrões no perfil demográfico e socioeconômico dos clientes que estejam associados ao seu nível de Credit Score?
+
+Quais características dos clientes apresentam maior associação com a classificação do score de crédito e podem contribuir para o desenvolvimento de modelos preditivos?
+
+*Contexto de negócio:*
+
+O Credit Score representa uma pontuação relacionada à credibilidade financeira de um indivíduo e ao risco de inadimplência.
+
+Instituições financeiras podem utilizar essas informações para apoiar decisões de concessão de crédito, aprovação de empréstimos e definição de condições de financiamento.
+
 ## 📊 Fonte de Dados
 
+Arquivo utilizado: CREDIT_SCORE_PROJETO_PARTE1.csv
+
+*A base apresenta:*
+- 164 registros de clientes.
+- 8 colunas.
+- 3 variáveis numéricas.
+- 5 variáveis categóricas.
+
+*Descrição das variáveis:*
+
+Variável — Descrição
+
+Age — Idade dos clientes
+
+Gender — Gênero
+
+Income — Salário mensal
+
+Education — Nível de escolaridade
+
+Marital Status — Estado civil
+
+Number of Children — Quantidade de filhos
+
+Home Ownership — Tipo de residência: própria ou alugada
+
+Credit Score — Classificação do score de crédito
+
+*A variável-alvo é Credit Score, inicialmente dividida em três categorias:*
+- High: score alto.
+- Average: score médio.
+- Low: score baixo.
+  
 ## 🛠️ LINGUAGENS E BIBLIOTECAS
+
+Python: linguagem utilizada para processamento e análise.
+
+Pandas: manipulação, limpeza e transformação dos dados.
+
+NumPy: operações numéricas.
+
+Matplotlib: construção de gráficos.
+
+Seaborn: visualizações estatísticas e matrizes de correlação.
+
+Plotly Express: gráficos interativos.
+
+Scikit-learn:
+- Label Encoder.
+- One-Hot Encoding.
+- Train-Test Split.
+
+Imbalanced-learn:
+- SMOTE para balanceamento das classes.
+
+SciPy: biblioteca científica importada no notebook.
 
 ## 🔍 Metodologia
 
+*Etapa 1 — Pré-processamento dos dados*
+- Inspeção das variáveis e identificação dos tipos de dados.
+- Conversão da variável Income de texto para formato numérico.
+- Identificação de valores ausentes.
+- Tratamento dos 34 registros ausentes na variável Age, utilizando a mediana de 36 anos.
+- Padronização das variáveis categóricas, convertendo os textos para letras minúsculas e removendo espaços desnecessários.
+- Inspeção das categorias para identificar inconsistências.
+
+*Etapa 2 — Análise exploratória dos dados (EDA)*
+
+Análise univariada:
+- Estatísticas descritivas das variáveis numéricas.
+- Distribuição de idade, renda e quantidade de filhos.
+- Visualização utilizando histogramas e boxplots.
+- Investigação de possíveis outliers.
+
+Análise bivariada:
+- Relação entre idade e estado civil.
+- Relação entre Credit Score e escolaridade.
+- Relação entre renda e idade.
+- Relação entre renda e Credit Score.
+- Relação entre propriedade de imóvel e Credit Score.
+- Investigação adicional das relações entre quantidade de filhos, gênero, renda e score de crédito.
+
+*Etapa 3 — Preparação para Machine Learning*
+- Análise de correlação entre variáveis numéricas.
+- Aplicação de Label Encoding nas variáveis Gender, Marital Status e Home Ownership.
+- Aplicação de One-Hot Encoding nas variáveis Education e Credit Score.
+- Exclusão das colunas categóricas originais após a transformação.
+- Conversão das variáveis booleanas em valores numéricos.
+- Separação dos dados em treinamento e teste, utilizando 75% para treinamento e 25% para teste.
+- Verificação da distribuição das classes.
+- Aplicação do SMOTE exclusivamente nos conjuntos de treinamento.
+- Exportação dos conjuntos preparados em arquivos CSV.
+  
 ## 📈 Resultados e Métricas
+
+O projeto apresenta resultados relacionados à qualidade dos dados, análise exploratória e preparação das bases para modelagem.
+
+*7.1. Tratamento de dados*
+
+Indicador — Resultado
+
+Registros originais — 164
+
+Valores ausentes em Age — 34
+
+Percentual de valores ausentes em Age — 20,73%
+
+Mediana utilizada no preenchimento — 36 anos
+
+Valores ausentes após tratamento — 0
+
+A variável Income também foi convertida de texto para formato numérico.
+
+*7.2. Estatísticas descritivas*
+
+Variável ——————— Média ——— Mediana ——— Mínimo ——— Máximo
+
+Age ————————— 37,20 ———— 36 ————— 25 ————— 53
+
+Income ——————— 83.765,24 ——— 83.750 ——— 25.000 ——— 162.500
+
+Number of Children —— 0,65 ————— 0 ————— 0 —————— 3
 
 ## 💡 Principais Insights e Implicações
 
+A análise exploratória identificou relações relevantes entre características socioeconômicas e a classificação de crédito dos clientes.
+
+#### Renda e idade
+
+Foi identificada uma correlação positiva de aproximadamente 0,62 entre idade e renda. A análise sugere que clientes mais velhos tendem a apresentar rendimentos mais elevados, embora essa relação não seja uma regra absoluta.
+
+#### Renda e Credit Score
+
+*O notebook identificou uma associação entre maior renda e score de crédito elevado:*
+- Clientes com renda inferior a 40 mil aparecem associados ao score baixo.
+- Clientes com renda entre 40 mil e 68 mil apresentam maior presença de score médio.
+- Clientes com renda a partir de 80 mil aparecem associados ao score alto.
+
+#### Escolaridade e Credit Score
+
+*A análise identificou diferenças na distribuição do score conforme a escolaridade:*
+- Clientes com mestrado e doutorado apresentam maior presença de score alto.
+- Clientes com graduação e formação associada apresentam maior presença de score médio.
+- Clientes com ensino médio apresentam maior presença de score baixo.
+
+#### Propriedade de imóvel e Credit Score
+
+Foi identificada uma associação entre possuir imóvel próprio e apresentar score elevado.
+
+*Segundo a análise registrada:*
+- 98,19% dos clientes com imóvel próprio apresentam score alto.
+- 64,15% dos clientes que alugam imóvel apresentam score baixo.
+
+#### Idade e estado civil
+
+*A análise identificou diferenças na distribuição do estado civil conforme a idade:*
+- Até 33 anos, aproximadamente 80% dos clientes são solteiros.
+- A partir dos 34 anos, aproximadamente 70% são casados.
+
+#### Quantidade de filhos e gênero
+
+A base apresenta predominância de clientes sem filhos (59,15%). O notebook também observou diferenças na distribuição dos scores entre homens e mulheres, com maior presença masculina na categoria média e feminina na categoria baixa.
+
+#### Implicações para o negócio
+
+Os resultados demonstram como a análise de dados pode ajudar a identificar padrões no perfil socioeconômico dos clientes e suas associações com a classificação de crédito.
+
+Esses padrões podem contribuir para a construção de modelos de classificação capazes de apoiar a avaliação de risco e a tomada de decisão das instituições financeiras.
 
 # Projeto de Credit Score - Naive Bayes
 
