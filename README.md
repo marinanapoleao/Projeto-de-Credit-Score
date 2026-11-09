@@ -35,6 +35,27 @@
 
 ## 💡 Principais Insights e Implicações
 
+
+# Projeto de Credit Score - Árvore de Decisão
+
+## 📌 Sobre o Projeto
+
+## 🎯 Objetivo
+
+## 💻 Problema de Negócio / Pergunta de Pesquisa
+
+## 📊 Fonte de Dados
+
+## 🛠️ LINGUAGENS E BIBLIOTECAS
+
+## 🔍 Metodologia
+
+## 📈 Resultados e Métricas
+
+## 💡 Principais Insights e Implicações
+
+
+
 ## 👩‍💻 Sobre a Autora
 
 Desenvolvido por Marina Napoleão — Cientista de Dados / Analista de Dados. 
