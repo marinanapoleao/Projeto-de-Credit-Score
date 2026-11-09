@@ -1,4 +1,5 @@
 # Projeto de Credit Score - Parte 1 - Processamento dos dados
+<img width="1408" height="768" alt="Gemini_Generated_Image_9gnh6m9gnh6m9gnh" src="https://github.com/user-attachments/assets/948fe497-5225-4bb3-909b-aafd3058f6b4" />
 
 ## 📌 Sobre o Projeto
 
@@ -205,6 +206,8 @@ Os resultados demonstram como a análise de dados pode ajudar a identificar padr
 Esses padrões podem contribuir para a construção de modelos de classificação capazes de apoiar a avaliação de risco e a tomada de decisão das instituições financeiras.
 
 # Projeto de Credit Score - Naive Bayes
+<img width="1408" height="768" alt="Gemini_Generated_Image_vogaiivogaiivoga" src="https://github.com/user-attachments/assets/c28d33ee-b748-4080-84a9-c976264366bf" />
+
 
 ## 📌 Sobre o Projeto
 
