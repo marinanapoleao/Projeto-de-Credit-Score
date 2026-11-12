@@ -311,21 +311,118 @@ Implicação para o negócio: a proposta do projeto é utilizar modelos preditiv
 
 ## 📌 Sobre o Projeto
 
+Projeto de classificação utilizando o algoritmo de Árvore de Decisão para analisar o comportamento de clientes e identificar a ocorrência de churn (cancelamento ou saída de clientes).
+
+O trabalho dá continuidade a um projeto anterior de pré-processamento e balanceamento de dados, no qual também foi aplicado o algoritmo Naive Bayes.
+
 ## 🎯 Objetivo
+
+Desenvolver um modelo de classificação utilizando Árvore de Decisão para prever a ocorrência de churn, identificando clientes que permaneceram e clientes que deixaram a empresa.
+
+Também foram avaliadas as principais variáveis que influenciam as previsões e comparado o desempenho do modelo com o algoritmo Naive Bayes.
 
 ## 💻 Problema de Negócio / Pergunta de Pesquisa
 
+Como utilizar o histórico e as características dos clientes para identificar aqueles com maior probabilidade de cancelar ou deixar a empresa?
+
+Quais variáveis apresentam maior influência na identificação do churn e como melhorar a capacidade de previsão do modelo?
+
 ## 📊 Fonte de Dados
 
+Bases de dados de treinamento e teste, previamente tratadas no Projeto de Credit Score - Processamento dos dados.
+Link: <https://github.com/marinanapoleao/Projeto-de-Credit-Score/blob/main/Projeto%20de%20Credit%20Score%20-%20Processamento%20dos%20dados.ipynb> 
+
+Foram utilizadas:
+- X_train_balanced.csv: variáveis independentes para treinamento.
+- y_train_balanced.csv: variável-alvo para treinamento.
+- X_test: variáveis independentes para teste.
+- y_test: variável-alvo para teste.
+  
 ## 🛠️ LINGUAGENS E BIBLIOTECAS
 
+- Python.
+- Pandas e NumPy: manipulação e análise dos dados.
+- Matplotlib e Seaborn: visualização dos resultados.
+- Scikit-learn:
+  - DecisionTreeClassifier;
+  - confusion_matrix;
+  - accuracy_score;
+  - classification_report;
+  - plot_tree.
+  
 ## 🔍 Metodologia
+
+- Carregamento das bases de treinamento e teste, previamente tratadas e balanceadas.
+
+- Verificação das variáveis e distribuição das classes.
+
+- Treinamento do modelo de Árvore de Decisão utilizando o critério Gini e random_state=0.
+
+- Avaliação do modelo utilizando acurácia, precisão, recall, F1-score e matriz de confusão.
+
+- Visualização da estrutura da árvore e análise da importância das variáveis.
+
+- Identificação das duas principais features: quantidade de produtos e idade.
+
+- Construção de um segundo modelo utilizando somente essas duas variáveis.
+
+- Comparação dos resultados entre a árvore completa, a árvore reduzida e o modelo Naive Bayes.
 
 ## 📈 Resultados e Métricas
 
+*Modelo 1 — Árvore completa*
+
+Acurácia: 79,30%
+
+Recall — Churn: 56%
+
+Precisão — Churn: 51%
+
+F1-score — Churn: 53%
+
+#### Matriz de confusão
+
+Resultado ———————  Quantidade
+
+Verdadeiros negativos ——— 16.798
+
+Falsos positivos ——————  2.851
+
+Falsos negativos —————— 2.310
+
+Verdadeiros positivos ——— 2.968
+
+*Modelo 2 — Árvore reduzida (Quantidade de Produtos + Idade)*
+
+Acurácia: 85%
+
+Recall — Churn: 52%
+
+Precisão — Churn: 67%
+
+F1-score — Churn: 59%
+
+#### Matriz de confusão
+
+Resultado ———————  Quantidade
+
+Verdadeiros negativos ——— 18.309
+
+Falsos positivos ——————  1.340
+
+Falsos negativos —————— 2.520
+
+Verdadeiros positivos ——— 2.758
+
 ## 💡 Principais Insights e Implicações
 
+- A quantidade de produtos e a idade foram identificadas como as duas variáveis mais importantes para a previsão de churn.
+- A árvore reduzida apresentou melhor desempenho geral, aumentando a acurácia de 79% para 85%.
+- A precisão da classe churn aumentou de 51% para 67%, reduzindo os falsos positivos de 2.851 para 1.340.
+- Entretanto, o recall da classe churn caiu de 56% para 52%, aumentando a quantidade de clientes que deixaram a empresa sem serem identificados pelo modelo.
+- O Naive Bayes apresentou resultados inferiores de acurácia para churn, enquanto a Árvore de Decisão apresentou melhor desempenho geral.
 
+*Implicação para o negócio:* o modelo pode auxiliar na identificação de padrões associados à saída de clientes, contribuindo para estratégias de retenção e ações preventivas. Entretanto, é importante considerar o equilíbrio entre identificar clientes que realmente podem sair e evitar classificações incorretas.
 
 ## 👩‍💻 Sobre a Autora
 
